@@ -1,29 +1,28 @@
 
 *.pydevproject
-.project
-.metadata
-.gradle
-bin/
-tmp/
-target/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
+Log4j/.project
+Log4j/.metadata
+Log4j/.bin/
+Log4j/.tmp/
+Log4j/.target/
+Log4j/.*.tmp
+Log4j/.*.bak
+Log4j/.*.swp
+Log4j/.*~.nib
+Log4j/.local.properties
+Log4j/..classpath
+Log4j/..settings/
+Log4j/..loadpath
 
 # External tool builders
-.externalToolBuilders/
+Log4j/..externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
-*.launch
+Log4j/*.launch
 
 # CDT-specific
-.cproject
+Log4j/.cproject
 
 # PDT-specific
-.buildpath
+Log4j/..buildpath
 
