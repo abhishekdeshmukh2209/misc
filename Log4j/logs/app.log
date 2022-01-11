@@ -1,0 +1,23 @@
+2022-01-11 15:18:38,254 DEBUG c.z.l.LogMain [main] Debug Message Logged !!!
+2022-01-11 15:18:38,256 INFO c.z.l.LogMain [main] Info Message Logged !!!
+2022-01-11 15:18:38,257 ERROR c.z.l.LogMain [main] Error Message Logged !!!
+java.lang.NullPointerException: NullError
+	at com.zimbra.log4j.LogMain.main(LogMain.java:16) [classes/:?]
+2022-01-11 15:18:53,529 TRACE c.z.l.LogMain [main] This is trance log msg
+2022-01-11 15:18:53,532 DEBUG c.z.l.LogMain [main] Debug Message Logged !!!
+2022-01-11 15:18:53,532 INFO c.z.l.LogMain [main] Info Message Logged !!!
+2022-01-11 15:18:53,532 ERROR c.z.l.LogMain [main] Error Message Logged !!!
+java.lang.NullPointerException: NullError
+	at com.zimbra.log4j.LogMain.main(LogMain.java:16) [classes/:?]
+2022-01-11 15:22:28,767 TRACE c.z.l.LogMain [main] This is trance log msg
+2022-01-11 15:22:28,769 DEBUG c.z.l.LogMain [main] Debug Message Logged !!!
+2022-01-11 15:22:28,769 INFO c.z.l.LogMain [main] Info Message Logged !!!
+2022-01-11 15:22:28,769 ERROR c.z.l.LogMain [main] Error Message Logged !!!
+java.lang.NullPointerException: NullError
+	at com.zimbra.log4j.LogMain.main(LogMain.java:16) [classes/:?]
+2022-01-11 15:23:52,758 TRACE c.z.l.LogMain [main] This is trance log msg
+2022-01-11 15:23:52,761 DEBUG c.z.l.LogMain [main] Debug Message Logged !!!
+2022-01-11 15:23:52,761 INFO c.z.l.LogMain [main] Info Message Logged !!!
+2022-01-11 15:23:52,761 ERROR c.z.l.LogMain [main] Error Message Logged !!!
+java.lang.NullPointerException: NullError
+	at com.zimbra.log4j.LogMain.main(LogMain.java:16) [classes/:?]
