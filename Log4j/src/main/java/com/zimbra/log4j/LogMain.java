@@ -33,22 +33,17 @@ public class LogMain {
     public static void main(String[] args) {
 
         LoggerContext lc = (LoggerContext) LogManager.getContext(false);
-        final Configuration config = lc.getConfiguration();
+        final Configuration config2 = lc.getConfiguration();
 
         Map<String, Appender> appenders2 = lc.getConfiguration().getAppenders();
         for (Map.Entry<String, Appender> entry : appenders2.entrySet()) {
             if (entry.getValue() instanceof RollingFileAppender) {
                 entry.getValue().getLayout().getContentFormat().replace("format",
                         "%highlight{%d [%t] %-5level: %msg%n%throwable}{FATAL=white, ERROR=red, WARN=blue, INFO=black, DEBUG=green, TRACE=blue}");
-
             }
-
         }
-
         lc.updateLoggers();
         Map<String, Appender> appenders3 = lc.getConfiguration().getAppenders();
-        
-        
 
         logger.debug("Hello from Log4j 2");
         logger.debug("This is a Debug Message!");
@@ -60,8 +55,27 @@ public class LogMain {
         }
         // logger.error("And here comes the Error Message!", new RuntimeException("Run
         // Run Run"));
-
-    }
+        
+        final LoggerContext ctx = (LoggerContext) LogManager.getContext(false);
+        
+        final Configuration config = ctx.getConfiguration();
+        final Layout<?> layout = PatternLayout.createDefaultLayout(config);
+        Appender appender = FileAppender.createAppender("target/test.log", "false", "false", "File", "true",
+            "false", "false", "4000", layout, null, "false", null, config);
+        appender.start();
+        config.addAppender(appender);
+        AppenderRef ref = AppenderRef.createAppenderRef("File", null, null);
+        AppenderRef[] refs = new AppenderRef[] {ref};
+        LoggerConfig loggerConfig = LoggerConfig.createLogger("false", Level.INFO, "org.apache.logging.log4j",
+            "true", refs, null, config, null );
+        loggerConfig.addAppender(appender, null, null);
+        config.addLogger("org.apache.logging.log4j", loggerConfig);
+        ctx.updateLoggers();
+        
+        
+        Map<String, Appender> appenders4 = lc.getConfiguration().getAppenders();
+    
+}
 
     public static void initializeYourLogger(String fileName, String pattern) {
 
